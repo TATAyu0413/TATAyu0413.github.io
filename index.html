@@ -1,1 +1,153 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Yu Wang</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<!-- <script type="text/javascript" src="script.js"></script> -->
+<div class="container">
+  <!-- <div class = "float-container">
+    <img src="images/p5.jpg" width="150">
+  </div> -->
+  <div class="header">
+    <div class="full-name">
+      <span class="first-name">Yu</span> 
+      <span class="last-name">Wang</span>
+    </div>
+    <div class="contact-info">
+      <span class="email">Email: </span>
+      <span class="email-val">12032879@mail.susyech.edu.cn</span>
+<!--       <span class="separator"></span>
+      <span class="phone">Phone: </span>
+      <span class="phone-val">(+86) 17671260413</span> -->
+    </div>
+    
+    <div class="about">
+      <span class="position">Research Interests</span>
+      <span class="desc">
+        My primary research interests lie in the field of <u>Security and Systems</u>. 
+        <!-- I was a master's student advised by Professor Fengwei Zhang in the COMPASS(COMputer And System Security) Lab at SUSTech.  -->
+        My past projects focus on utilizing hardware-software codesign to enhance the effectiveness and efficiency of software security mechanisms. Looking forward, I am particularly interested in exploring software and system security, such as program analysis, reverse engineering.
+      </span>
+    </div>
+  </div>
+  
+   <div class="details">
+        <div class="section">
+      <div class="section__title">Education</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">Southern University of Science and Technology (SUSTech)</div>
+            <div class="addr">Shenzhen, China</div>
+            <div class="duration">Sept. 2020 - June 2023</div>
+          </div>
+          <div class="right">
+            <div class="desc">M.Eng., Department of Computer Science and Engineering <br>
+              GPA: 3.47 (TOP 20%)
+            </div>
+          </div>
+        </div>
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">Zhongnan University of Economics and Law (ZUEL)</div>
+            <div class="addr">Wuhan, China</div>
+            <div class="duration">Sept. 2016 - June 2020</div>
+          </div>
+          <div class="right">
+            <div class="desc">B.E., Department of Computer Science and Technology <br>
+            GPA: 3.79 (TOP 10%)
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+  </div>
+
+     <div class="section">
+      <div class="section__title">Publications</div> 
+       <div class="section__list">
+         <div class="section__list-item">
+           <div class="name">Raft: Hardware-assisted Dynamic Information Flow Tracking for Runtime Protection on RISC-V</div>
+           <a href='paper/raft-raid23-paper.pdf'>[paper]</a>
+           <a href='paper/raft-raid23-slides.pdf'>[slides]</a>
+           <a href='https://github.com/Compass-All/Raft'>[github]</a>
+           <div class="text"><u>Yu Wang</u>, Jinting Wu, Haodong Zheng, Zhenyu Ning, Boyuan He, Fengwei Zhang*</div>
+           <div class="text">In Proceedings of the 26th International Symposium on Research in Attacks, Intrusions and Defenses (RAID'23), Hong Kong, October, 2023.</div>
+           <button class="toggle-button"><i class="fa-solid fa-caret-right" style="color: #54afe4;"></i></button>Introduction
+           <div class="content">
+             <p class="text1">Dynamic Information Flow Tracking (DIFT) is a fundamental computer security technique that tracks the data flow of interest at runtime, overcoming the limitations of discovering data dependencies statically at compilation time. However, software-based DIFT tools often suffer from unbearably high runtime overhead due to dynamic binary instrumentation or virtual machine, limiting the usefulness of DIFT. Even though hardware-assisted DIFT frameworks cut down the performance overhead effectively, it is still unacceptable for applications under rigorous time constraints.</p>
+             <figure class="fig">              
+              <img src="images/p1.jpg" alt="Architecture overview of Raft" width="
+              100%">
+              <figcaption class="fig-title">Architecture overview of Raft</figcaption>
+            </figure>
+             <p class="text1">This paper presents Raft, <u>a flexible hardware-assisted DIFT framework</u> that provides runtime protection for embedded applications without delay to the programs. Our framework is designed as a coprocessor for a RISC-V Rocket Core, introducing minimally-invasive changes to the main processor. In Raft, we apply a novel storage mechanism with hybrid byte/variable granularity to reduce the size of tag storage and provide fine-grained protection. We deploy Raft on the Rocket emulator and FPGA development board to evaluate its effectiveness and efficiency. The experiment results show that, compared to previous approaches, Raft cuts down the performance overhead from more than 20% to less than 0.1% on NBench and CoreMark microbenchmarks. The performance overhead of Raft on SPEC CINT 2006 benchmarks is negligible (0.13%). We also utilize a customized program to demonstrate its functionality and conduct a detailed evaluation with a real-world embedded medical application and known CVEs.</p>
+           </div>
+         </div>
+         
+         <div class="section__list-item">
+                    <div class="name">RetTag: Hardware-assisted Return Address Integrity on RISC-V</div>
+           <a href='paper/rettag-eurosec22-paper.pdf'>[paper]</a>
+           <a href='paper/rettag-eurosec22-slides.pdf'>[slides]</a>
+           <a href='https://github.com/Compass-All/rettag'>[github]</a>
+           <div class="text"><u>Yu Wang</u>, Jinting Wu, Tai Yue, Zhenyu Ning*, and Fengwei Zhang
+           <div class="text"></div>
+           In Proceedings of the 15th European Workshop on Systems Security (EuroSec'22), in conjunction with the European Conference on Computer Systems (EuroSys'22), Rennes, France, April 2022.</div>
+           <button class="toggle-button1"><i class="fa-solid fa-caret-right" style="color: #54afe4;"></i></button>Introduction
+           <div class="content1">
+             <p class="text1">Memory-corruption-based return address hijacking, such as Return-oriented Programming (ROP), is a prevalent attack technique that compromises the program's control flow integrity. So far, software-based defenses against these attacks either introduce heavy performance overhead or trade-off security for performance. Meanwhile, some hardware-assisted defense mechanisms are not practical for large-scale deployment due to additional requirements of hardware features and flaws caused by complicated design.
+            </p>
+            <div class="figure-container">
+              <figure class="fig">              
+                <img src="images/p2.jpg" alt="Generation and storage of PAC" width="
+                80%">
+                <figcaption class="fig-title">Generation and storage of PAC</figcaption>
+              </figure>
+              <figure class="fig">              
+                <img src="images/p3.jpg" alt="Instrumented assembly instructions by RetTag" width="
+                100%">
+                <figcaption class="fig-title">Instrumented assembly instructions by RetTag</figcaption>
+              </figure>
+          </div>
+            <p class="text1">In this paper, we present RetTag, a hardware-assisted and crypto-based defense scheme on RISC-V architecture that <u>leverages Pointer Authentication Code (PAC) embedded into the unused bits of function return address to ensure return address integrity</u>. We extend RISC-V ISA with Return Address Authentication (RAA) instructions to generate the PAC efficiently. We integrate RetTag into the mainstream compilers GCC and LLVM to help developers transparently employ the defense and implement a prototype of RetTag on the Rocket emulator and FPGA development board to demonstrate its effectiveness by detecting various ROP attacks. Moreover, the performance evaluation shows that RetTag only introduces 0.11% performance overhead on NBench and 7.69% on Coremark.</p>
+           </div>
+         </div>
+       </div>
+    </div>
+
+     <div class="section">
+     <div class="section__title">
+       Honors & Awards
+       </div>
+       <div class="section__list">
+         <div class="section__list-item">
+           <div class="left", style="width:94%">Excellent Graduate with a Postgraduate Degree <br>
+             Excellent Graduate with a Bachelor Degree <br>
+             Distinguished Bachelor's Thesis at ZUEL<br>
+           </div>
+           <div class="right", style="width:5%">2023 <br>
+             2020 <br>
+             2020
+           </div>
+          </div>
+       </div>
+     </div>
+     </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
